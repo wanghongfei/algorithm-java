@@ -1,15 +1,13 @@
 package cn.fh.sort;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import cn.fh.util.ReadData;
 import cn.fh.util.Stopwatch;
 
 public class SelectionSort {
+	/**
+	 * 我最常用的方式，性能居然是最慢的
+	 * @param arr
+	 */
 	public static void mysort(Comparable[] arr) {
 		for (int i = 0 ; i < arr.length ; ++i) {
 			for (int j = i + 1 ; j < arr.length ; ++j) {
@@ -22,6 +20,11 @@ public class SelectionSort {
 		}
 	}
 	
+	/**
+	 * Algorithm 中选择排序最简单的实现方式
+	 * 记录需要交换元素的下标，在一躺遍历结束后才执行交换操作
+	 * @param arr
+	 */
 	public static void hissort(Comparable[] arr) {
 		for (int i = 0 ; i < arr.length ; ++i) {
 			int min = i;
