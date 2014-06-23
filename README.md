@@ -1,1 +1,1 @@
-## algorithm-java#### cn.fh.search* 二分查找#### cn.fh.sort* 选择排序* 插入排序* 希尔排序#### cn.fh.util* 用于统计代码执行耗时的计时器(Stopwatch)* 用于从Stdin中读入测试数据(ReadData)
+## algorithm-java#### cn.fh.search* 二分查找#### cn.fh.sort* 选择排序* 插入排序* 希尔排序* 快速排序#### cn.fh.util* 用于统计代码执行耗时的计时器(Stopwatch)* 用于从Stdin中读入测试数据(ReadData)
