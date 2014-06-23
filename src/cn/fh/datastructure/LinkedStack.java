@@ -75,6 +75,14 @@ public class LinkedStack<T> implements Iterable<T> {
 		return oldFirst.data;
 	}
 	
+	public T getTop() {
+		if (true == isEmpty()) {
+			return null;
+		}
+		
+		return first.data;
+	}
+	
 	public int size() {
 		return size;
 	}
