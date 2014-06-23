@@ -2,6 +2,9 @@ package cn.fh.datastructure;
 
 import static java.lang.System.out;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 
 /**
@@ -96,9 +99,21 @@ public class FixedCapacityStack<T> implements Iterable<T> {
 		return size == 0;
 	}
 	
-	public static void main(String[] args) {
+	/**
+	 * 从 Stdin 中读入4W个整数进行测试
+	 * @param args
+	 * @throws IOException
+	 */
+	public static void main(String[] args) throws IOException {
 		FixedCapacityStack<String> st = new FixedCapacityStack<String>(2);
-		st.push("neo");
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String line = null;
+		while ((line = br.readLine()) != null) {
+			st.push(line);
+		}
+		
+		/*st.push("neo");
 		st.push("bruce");
 		st.push("google");
 
@@ -110,6 +125,6 @@ public class FixedCapacityStack<T> implements Iterable<T> {
 		
 		for (String s : st) {
 			out.println(s);
-		}
+		} */
 	}
 }
