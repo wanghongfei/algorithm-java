@@ -2,20 +2,52 @@ package cn.fh.datastructure;
 
 import static java.lang.System.out;
 
+import java.util.Iterator;
+
 /**
- * 固定容量的栈，用数组实现。
+ * 固定容量的栈，用数组实现。支持for-each循环
  * 当空间不足时，自动将空间加倍。空间使用少于1/4时，将空间减半
  * @author whf
  *
  * @param <T>
  */
-public class FixedCapacityStack<T> {
+public class FixedCapacityStack<T> implements Iterable<T> {
 	private int size;
 	private T[] arr;
 
 	public FixedCapacityStack(int capacity) {
 		size = 0;
 		arr = (T[])new Object[capacity];
+	}
+	
+	// 迭代器
+	private class StackIterator implements Iterator<T> {
+		private int ix = size - 1;
+
+		@Override
+		public boolean hasNext() {
+			return ix >= 0;
+		}
+
+		@Override
+		public T next() {
+			return arr[ix--];
+		}
+
+		/**
+		 * 不支持删除操作
+		 */
+		@Override
+		public void remove() {
+			throw new UnsupportedOperationException();
+		}
+		
+		
+	}
+	
+	@Override
+	public Iterator<T> iterator() {
+		return new StackIterator();
 	}
 	
 	/**
@@ -75,9 +107,9 @@ public class FixedCapacityStack<T> {
 		st.push("google");
 		
 		st.pop();
-		st.pop();
-		st.pop();
-		st.pop();
-		st.pop();
+		
+		for (String s : st) {
+			out.println(s);
+		}
 	}
 }
