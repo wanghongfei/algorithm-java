@@ -1,1 +1,1 @@
-## algorithm-java#### cn.fh.search* 二分查找#### cn.fh.sort* 选择排序* 插入排序* 希尔排序* 快速排序#### cn.fh.util* 用于统计代码执行耗时的计时器(Stopwatch)* 用于从Stdin中读入测试数据(ReadData)
+## algorithm-java#### cn.fh.search* 二分查找#### cn.fh.sort* 选择排序* 插入排序* 希尔排序* 快速排序#### cn.fh.datastructure* 基于动态数组的栈* 基于链表的栈* 基于链表的队列#### cn.fh.util* 统计代码执行耗时的计时器(Stopwatch)* 从Stdin中读入测试数据(ReadData)largeW.txt中包含100万个整数。smallW.txt包含4万个整数。
