@@ -32,7 +32,7 @@ public class EvaluateExpression {
 	
 	/**
 	 * 计算表达式
-	 * @param exp 四则运算表达式
+	 * @param exp 四则运算表达式, 每个符号必须以空格分隔
 	 * @return
 	 */
 	public double calcualte(String exp) {
